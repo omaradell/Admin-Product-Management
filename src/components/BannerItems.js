@@ -1,0 +1,36 @@
+import React from "react";
+import Table from "react-bootstrap/Table";
+import { Button } from "react-bootstrap";
+
+function BannerItems(props) {
+  return (
+    <div>
+      <Table striped>
+        <thead>
+          <tr>
+            <th>Page Name</th>
+            <th>Banner No.</th>
+            <th>URL</th>
+            <th>Last Edit</th>
+            <th>Editor Name</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{props.pagename}</td>
+            <td>{props.menutab}</td>
+            <td>{props.url}</td>
+            <td>{props.appearance}</td>
+            <td>{props.order}</td>
+            <td>{props.status}</td>
+            <td>{props.action}</td>
+          </tr>
+        </tbody>
+      </Table>
+    </div>
+  );
+}
+
+export default BannerItems;
