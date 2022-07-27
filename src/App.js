@@ -2,19 +2,31 @@ import "./App.css";
 import React from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import Navigation from "./components/Navigation";
 import NavigationItems from "./components/NavigationItems";
-import AddNavigation from "./components/AddNavigation";
+import Navigation from "./components/Navigation";
 import Categories from "./components/Categories";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import data from "./data";
-import AddCategory from "./components/AddCategory";
-import Banners from "./components/Banners";
 import BannerItems from "./components/BannerItems";
+import HomeBannersItems from "./components/HomeBannersItems";
+import ManagePageContent from "./components/ManagePageContent";
+import PageContentItems from "./components/PageContentItems";
+import Reviews from "./components/Reviews";
+import AddCategory from "./components/AddCategory";
+import AddNavigation from "./components/AddNavigation";
+import Banners from "./components/Banners";
 import HomePageBanners from "./components/HomePageBanners";
-import HomeBannersItems from "./components/HomeBannersItems"
 import NewHomeBanner from "./components/NewHomeBanner";
-
+import UploadBanner from "./components/UploadBanner";
+import ReviewsItems from "./components/ReviewsItems";
+import Blogs from "./components/Blog";
+import BlogItems from "./components/BlogItems";
+import BlogsComments from "./components/BlogComments";
+import BlogCommentsItems from "./components/BlogCommentsItems";
+import Email from "./components/Email";
+import AddEmailTemplate from "./components/AddEmailTemplate";
+import Customers from "./components/Customers";
+import CustomerItems from "./components/CustomerItems";
 
 function App() {
   const NavigationElements = data.map((items) => {
@@ -43,7 +55,7 @@ function App() {
       />
     );
   });
-  const BannersElemets = data.map((items) => {
+  const BannersElements = data.map((items) => {
     return (
       <BannerItems
         pagename={items.pagename}
@@ -56,7 +68,7 @@ function App() {
       />
     );
   });
-  const HomeBannersElemets = data.map((items) => {
+  const HomeBannersElements = data.map((items) => {
     return (
       <HomeBannersItems
         pagename={items.pagename}
@@ -69,7 +81,85 @@ function App() {
       />
     );
   });
-  console.log(CategoryElements);
+  const PageContentElements = data.map((items) => {
+    return (
+      <PageContentItems
+        pagename={items.pagename}
+        menutab={items.menutab}
+        url={items.url}
+        appearance={items.appearance}
+        order={items.order}
+        status={items.status}
+        action={items.action}
+      />
+    );
+  });
+  const ReviewsElements = data.map((items) => {
+    return (
+      <ReviewsItems
+        pagename={items.pagename}
+        menutab={items.menutab}
+        url={items.url}
+        appearance={items.appearance}
+        order={items.order}
+        status={items.status}
+        action={items.action}
+      />
+    );
+  });
+  const BlogElements = data.map((items) => {
+    return (
+      <BlogItems
+        pagename={items.pagename}
+        menutab={items.menutab}
+        url={items.url}
+        appearance={items.appearance}
+        order={items.order}
+        status={items.status}
+        action={items.action}
+      />
+    );
+  });
+  const BlogCommentsElements = data.map((items) => {
+    return (
+      <BlogCommentsItems
+        pagename={items.pagename}
+        menutab={items.menutab}
+        url={items.url}
+        appearance={items.appearance}
+        order={items.order}
+        status={items.status}
+        action={items.action}
+      />
+    );
+  });
+  const EmailElements = data.map((items) => {
+    return (
+      <Email
+        pagename={items.pagename}
+        menutab={items.menutab}
+        url={items.url}
+        appearance={items.appearance}
+        order={items.order}
+        status={items.status}
+        action={items.action}
+      />
+    );
+  });
+  const CustomersElements = data.map((items) => {
+    return (
+      <CustomerItems
+        pagename={items.pagename}
+        menutab={items.menutab}
+        url={items.url}
+        appearance={items.appearance}
+        order={items.order}
+        status={items.status}
+        action={items.action}
+      />
+    );
+  });
+  // console.log(CategoryElements);
   return (
     <div>
       <Header />
@@ -79,21 +169,34 @@ function App() {
             <Navbar />
           </Col>
           <Col>
-            <Container>
+            <Container >
               <Card>
                 <Card.Body>
                   {/* <AddCategory/> */}
                   {/* <AddNavigation/> */}
                   {/* <Categories /> */}
-                  {/* <AddNavigation/> */}
-                  <Navigation />
-                  {NavigationElements}
-                  {/* <Banners />
-                  {BannersElemets} */}
-                  {/* <HomePageBanners/>
-                  {HomeBannersElemets} */}
-                  {/* <NewHomeBanner/> */}
                   {/* {CategoryElements} */}
+                  {/* <AddNavigation/> */}
+                  {/* <Navigation />
+                  {NavigationElements} */}
+                  {/* <Banners />
+                  {BannersElements} */}
+                  {/* <HomePageBanners/>
+                  {HomeBannersElements} */}
+                  {/* <NewHomeBanner/> */}
+                  {/* <ManagePageContent/>
+                  {PageContentElements} */}
+                  {/* <Reviews/>
+                  {ReviewsElements} */}
+                  {/* <Blogs/>
+                  {BlogElements} */}
+                  {/* <BlogsComments/>
+                  {BlogCommentsElements} */}
+                  {/* {EmailElements} */}
+                  {/* <Email/> */}
+                  {/* <AddEmailTemplate/> */}
+                  <Customers />
+                  {CustomersElements}
                 </Card.Body>
               </Card>
             </Container>

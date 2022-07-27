@@ -2,21 +2,19 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import { Button } from "react-bootstrap";
 
-function HomeBannerItems(props) {
+function BlogItems(props) {
   return (
     <div>
       <Table striped>
         <thead>
           <tr>
-            <th>Banner Name</th>
-            <th>Order</th>
+            <th>Post</th>
+            <th>Category</th>
             <th>URL</th>
-            <th>Period</th>
-            <th>Last Edit</th>
-            <th>Editor Name</th>
+            <th>Published Date</th>
+            <th>Author</th>
             <th>Status</th>
             <th>Action</th>
-
           </tr>
         </thead>
         <tbody>
@@ -27,9 +25,7 @@ function HomeBannerItems(props) {
             <td>{props.appearance}</td>
             <td>{props.order}</td>
             <td>{props.status}</td>
-            <td>{props.status}</td>
             <td>{props.action}</td>
-
           </tr>
         </tbody>
       </Table>
@@ -37,4 +33,4 @@ function HomeBannerItems(props) {
   );
 }
 
-export default HomeBannerItems;
+export default BlogItems;

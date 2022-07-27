@@ -8,6 +8,7 @@ import CategoryIcon from "./CategoryIcon";
 export default function AddCategory() {
   return (
     <Form>
+      <h2>Add / Edit Category</h2>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="">
           <Form.Label>Category Name</Form.Label>

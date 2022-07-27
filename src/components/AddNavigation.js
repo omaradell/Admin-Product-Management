@@ -7,6 +7,7 @@ import Card from "react-bootstrap/Card";
 export default function AddNavigation() {
   return (
     <Form>
+      <h2>Add Navigation</h2>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridEmail">
           <Form.Label>Page Name</Form.Label>

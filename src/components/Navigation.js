@@ -7,6 +7,7 @@ import { Row , Col} from "react-bootstrap";
 export default function Navigation() {
   return (
     <>
+    <h3>Manage Navigation </h3>
     <Row>
       <Col>
       <Button variant="success">Add New</Button>{" "}
