@@ -27,6 +27,9 @@ import Email from "./components/Email";
 import AddEmailTemplate from "./components/AddEmailTemplate";
 import Customers from "./components/Customers";
 import CustomerItems from "./components/CustomerItems";
+import ResetPassword from "./components/ResetPassword";
+import SendMessage from "./components/SendMessage";
+import ChangePassword from "./components/ChangePassword";
 
 function App() {
   const NavigationElements = data.map((items) => {
@@ -107,6 +110,19 @@ function App() {
       />
     );
   });
+  const ReviewCardsElements = data.map((items) => {
+    return (
+      <Reviews
+        pagename={items.pagename}
+        menutab={items.menutab}
+        url={items.url}
+        appearance={items.appearance}
+        order={items.order}
+        status={items.status}
+        action={items.action}
+      />
+    );
+  });
   const BlogElements = data.map((items) => {
     return (
       <BlogItems
@@ -169,36 +185,40 @@ function App() {
             <Navbar />
           </Col>
           <Col>
-            <Container >
-              <Card>
-                <Card.Body>
-                  {/* <AddCategory/> */}
-                  {/* <AddNavigation/> */}
-                  {/* <Categories /> */}
-                  {/* {CategoryElements} */}
-                  {/* <AddNavigation/> */}
-                  {/* <Navigation />
+            <Container>
+              {/* <Card>
+                <Card.Body> */}
+              {/* <AddCategory/> */}
+              {/* <AddNavigation/> */}
+              {/* <Categories /> */}
+              {/* {CategoryElements} */}
+              {/* <AddNavigation/> */}
+              {/* <Navigation />
                   {NavigationElements} */}
-                  {/* <Banners />
+              {/* <Banners />
                   {BannersElements} */}
-                  {/* <HomePageBanners/>
+              {/* <HomePageBanners/>
                   {HomeBannersElements} */}
-                  {/* <NewHomeBanner/> */}
-                  {/* <ManagePageContent/>
+              {/* <NewHomeBanner/> */}
+              {/* <ManagePageContent/>
                   {PageContentElements} */}
-                  {/* <Reviews/>
-                  {ReviewsElements} */}
-                  {/* <Blogs/>
-                  {BlogElements} */}
-                  {/* <BlogsComments/>
-                  {BlogCommentsElements} */}
-                  {/* {EmailElements} */}
-                  {/* <Email/> */}
-                  {/* <AddEmailTemplate/> */}
-                  <Customers />
-                  {CustomersElements}
-                </Card.Body>
-              </Card>
+              {/* <Reviews/> */}
+              {/* {ReviewCardsElements}
+              {ReviewsElements} */}
+              {/* <Blogs />
+              {BlogElements} */}
+              {/* <BlogsComments />
+              {BlogCommentsElements} */}
+              {/* {EmailElements} */}
+              {/* <Email/> */}
+              {/* <AddEmailTemplate/> */}
+              {/* <Customers />
+              {CustomersElements} */}
+              {/* <ResetPassword/> */}
+              {/* <SendMessage/> */}
+              <ChangePassword />
+              {/* </Card.Body>
+              </Card> */}
             </Container>
           </Col>
         </Row>

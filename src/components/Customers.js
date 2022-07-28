@@ -35,18 +35,18 @@ export default function Customers(props) {
           </Col> */}
         </Row>
         <Row class="d-flex justify-content-center">
-          <Col >
+          <Col class="d-flex justify-content-center">
             <Card.Title>Hello </Card.Title>
           </Col>
         </Row>
         <Row class="d-flex justify-content-center">
-          <Col >
+          <Col class="d-flex justify-content-center">
             <Card.Text>World</Card.Text>
           </Col>
         </Row>
         <hr></hr>
         <Row class="d-flex justify-content-center p-1">
-          <Col >
+          <Col class="d-flex justify-content-center">
             <Button
               className="p-1"
               variant="primary"
